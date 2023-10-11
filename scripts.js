@@ -1,9 +1,15 @@
-function limitTextArea(element, maxCharPerRow) {
-  const lines = element.value.split("\n");
-  for (let i = 0; i < lines.length; i++) {
-    if (lines[i].length > maxCharPerRow) {
-      lines[i] = lines[i].substring(0, maxCharPerRow);
-    }
-  }
-  element.value = lines.slice(0, 11).join("\n");
+const input = document.querySelector("#input-text");
+const output = document.querySelector("#output-text");
+
+function getInfo() {
+  const lines = input.value.split("\n");
+  const formattedLines = lines
+    .filter((line) => line.trim() !== "")
+    .map((line) => {
+      const parts = line.split(":");
+      return `  "${parts[0]}": "${parts[1]}"`;
+    });
+  const textFormatted = `{\n${formattedLines.join("\n")}\n}`;
+  console.log(textFormatted);
+  output.textContent = textFormatted;
 }

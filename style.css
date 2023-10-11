@@ -1,3 +1,11 @@
+:root {
+  --code-font: "Source Code Pro", sans-serif;
+}
+
+body {
+  font-family: var(--code-font);
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -17,6 +25,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .text-box {
   width: 100%;
   height: 100%;
@@ -28,8 +37,8 @@
 #submit-button {
   margin-top: 10px;
   font-size: 1rem;
+  font-family: var(--code-font);
   padding: 0.5rem;
-  color: green;
 }
 
 .textBoxContainer {

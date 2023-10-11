@@ -5,23 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Source+Code+Pro&family=Young+Serif&display=swap"
+        rel="stylesheet">
+    <title>JSON Formatter</title>
 </head>
 
 <body>
     <div class="container">
         <div class="mainContainer">
             <div class="textBoxContainer">
-                <div class="square" id="square1">
-                    <textarea class="text-box" placeholder="JSON Namess" rows="6"
-                        oninput="limitTextArea(this, 20);"></textarea>
-                </div>
-                <div class="square" id="square2">
-                    <textarea class="text-box" placeholder="JSON Values" rows="6"
-                        oninput="limitTextArea(this, 20);"></textarea>
+                <div class="square" id="square">
+                    <textarea id="input-text" class="text-box" placeholder="NAME:VALUE"></textarea>
                 </div>
             </div>
-            <button id="submit-button" type="submit">Submit</button>
+            <button id="submit-button" onclick="getInfo()">Format</button>
+            <div class="square" id="square">
+                <textarea id="output-text" class="text-box uneditable-text" rows="6"
+                    readonly>{&#10; Text will output here&#10;}</textarea>
+            </div>
         </div>
     </div>
     <script src="scripts.js"></script>
