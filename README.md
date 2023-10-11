@@ -3,24 +3,29 @@
 **Overview:**  
 JSON Syntax Formatter is a simple web-based tool that takes input in the form of name-value pairs and formats it into valid JSON syntax.
 
-**Usage:**  
+**Usage:**
 
 1. Open the provided HTML file in your web browser.
 
 2. In the **Input JSON Data** textbox, enter your data in the following format:
+
 ```
 name1:value1
 name2:value2
 ```
-###or
+
+**OR**
+
 ```
 name1|value1
 name2|value2
 ```
+
 3. Click the **Format** button.
 
 4. The tool will format the data into JSON syntax, and the result will be displayed in the **Formatted JSON Output** textbox.
-```JSON   
+
+```JSON
 {
 "name1": "value1",
 "name2": "value2"
@@ -32,12 +37,15 @@ name2|value2
 **Example:**
 
 **Input JSON Data:**
+
 ```
 first_name:John
 last_name:Doe
 age:30
 ```
+
 **Formatted JSON Output:**
+
 ```JSON
 {
 "first_name": "John",
