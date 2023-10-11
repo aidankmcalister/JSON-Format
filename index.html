@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="mainContainer">
+            <div class="textBoxContainer">
+                <div class="square" id="square1">
+                    <textarea class="text-box" placeholder="JSON Namess" rows="6"
+                        oninput="limitTextArea(this, 20);"></textarea>
+                </div>
+                <div class="square" id="square2">
+                    <textarea class="text-box" placeholder="JSON Values" rows="6"
+                        oninput="limitTextArea(this, 20);"></textarea>
+                </div>
+            </div>
+            <button id="submit-button" type="submit">Submit</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
