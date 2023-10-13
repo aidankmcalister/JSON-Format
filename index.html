@@ -18,13 +18,18 @@
         <div class="mainContainer">
             <div class="textBoxContainer">
                 <div class="square" id="square">
-                    <textarea id="input-text" class="text-box" placeholder="NAME:VALUE"></textarea>
+                    <textarea id="input-text" class="text-box"
+                        placeholder="NAME:VALUE&#10;OR&#10;NAME|VALUE"></textarea>
+                    <img class="svg-icon eraseIcon" src="images/icons/erase.svg" alt="Clear Button"
+                        onclick="eraseText()">
                 </div>
             </div>
             <button id="submit-button" onclick="getInfo()">Format</button>
+            <p class="error-message" id="errorMsg">Input is required.</p>
             <div class="square" id="square">
-                <textarea id="output-text" class="text-box uneditable-text" rows="6"
-                    readonly>{&#10; Text will output here&#10;}</textarea>
+                <img class="svg-icon clipboardIcon" src="images/icons/clipboard.svg" alt="Copy Button"
+                    onclick="copyText()">
+                <div id="output-text" class="uneditable-text">{<br />&emsp;Text will output here<br />}</div>
             </div>
         </div>
     </div>

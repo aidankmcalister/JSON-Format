@@ -19,6 +19,7 @@ body {
   justify-content: center;
 }
 .square {
+  position: relative;
   width: 200px;
   height: 200px;
   display: flex;
@@ -33,9 +34,10 @@ body {
   padding: 10px;
   border: 1px solid #888;
   resize: none;
+  font-size: 0.8rem;
 }
 #submit-button {
-  margin-top: 10px;
+  margin: 1rem 0rem;
   font-size: 1rem;
   font-family: var(--code-font);
   padding: 0.5rem;
@@ -43,4 +45,51 @@ body {
 
 .textBoxContainer {
   display: flex;
+}
+
+.cyan-text {
+  color: #297390;
+}
+
+.orange-text {
+  color: #dd7b3c;
+}
+
+#output-text {
+  width: 100%;
+  height: 100%;
+  max-height: 10rem;
+  padding: 10px;
+  border: 1px solid #888;
+  resize: none;
+  font-size: 0.8rem;
+  white-space: pre;
+}
+
+.error-message {
+  display: none;
+  margin-top: 4.6rem;
+  position: absolute;
+  font-size: 0.6rem;
+  color: red;
+  transition: opacity 2s;
+}
+
+.eraseIcon:hover,
+.clipboardIcon:hover {
+  cursor: pointer;
+}
+
+.eraseIcon {
+  position: absolute;
+  bottom: 1rem;
+  right: 0.4rem;
+  height: 1.5rem;
+}
+
+.clipboardIcon {
+  position: absolute;
+  top: 1rem;
+  right: 0.4rem;
+  height: 1.25rem;
 }
