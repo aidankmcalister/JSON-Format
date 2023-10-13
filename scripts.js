@@ -13,7 +13,10 @@ function getInfo() {
       .filter((line) => line.trim() !== "")
       .map((line) => {
         const parts = line.split(/[:|]/);
-        return `<span class="cyan-text">"${parts[0]}"</span>: <span class="orange-text">"${parts[1]}"</span>`;
+        const key = parts[0].trim();
+        const value = parts[1].trim();
+        const formattedValue = !isNaN(value) ? value : `"${value}"`;
+        return `<span class="cyan-text">"${key}"</span>: <span class="orange-text">${formattedValue}</span>`;
       });
 
     formattedLines.forEach((line, index) => {
@@ -40,5 +43,5 @@ function copyText() {
 }
 
 function eraseText() {
-  input.textContent = "";
+  input.value = "";
 }
