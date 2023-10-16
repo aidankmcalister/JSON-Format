@@ -1,6 +1,33 @@
 const input = document.querySelector("#input-text");
 const output = document.querySelector("#output-text");
 const errorMsgElement = document.querySelector("#errorMsg");
+let part1 = null;
+let part2 = null;
+let isOn;
+
+function toggleMultipleClasses(element, ...classNames) {
+  classNames.forEach((className) => {
+    element.classList.toggle(className);
+  });
+}
+
+function appearanceMode() {
+  isOn = !isOn;
+  console.log(isOn);
+  if (!part1 || !part2) {
+    part1 = document.querySelector("#part1");
+    part2 = document.querySelector("#part2");
+  }
+
+  toggleMultipleClasses(document.body, "dark-mode");
+  toggleMultipleClasses(input, "input-dark", "textbox-dark");
+  toggleMultipleClasses(output, "output-dark", "textbox-dark");
+
+  if (part1 || part2) {
+    toggleMultipleClasses(part1, "part1-text-dark");
+    toggleMultipleClasses(part2, "part2-text-dark");
+  }
+}
 
 function getInfo() {
   if (input.value.trim() === "") {
@@ -16,7 +43,18 @@ function getInfo() {
         const key = parts[0].trim();
         const value = parts[1].trim();
         const formattedValue = !isNaN(value) ? value : `"${value}"`;
-        return `<span class="cyan-text">"${key}"</span>: <span class="orange-text">${formattedValue}</span>`;
+        return `<span id="part1" class="cyan-text">"${key}"</span>: <span id="part2" class="orange-text">${formattedValue}</span>`;
+
+        if (!part1 || !part2) {
+          part1 = document.querySelector("#part1");
+          part2 = document.querySelector("#part2");
+          console.log("part1:", part1);
+          console.log("part2:", part2);
+        }
+
+        console.log(part1);
+        toggleMultipleClasses(part1, "part1-text-dark");
+        toggleMultipleClasses(part2, "part2-text-dark");
       });
 
     formattedLines.forEach((line, index) => {

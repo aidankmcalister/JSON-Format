@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <button id="toggleColorMode" class="btn" onclick="appearanceMode()">Change Mode</button>
     <div class="container">
         <div class="mainContainer">
             <div class="textBoxContainer">
@@ -24,12 +25,13 @@
                         onclick="eraseText()">
                 </div>
             </div>
-            <button id="submit-button" onclick="getInfo()">Format</button>
+            <button id="submit-button" class="btn" onclick="getInfo()">Format</button>
             <p class="error-message" id="errorMsg">Input is required.</p>
             <div class="square" id="square">
                 <img class="svg-icon clipboardIcon" src="images/icons/clipboard.svg" alt="Copy Button"
                     onclick="copyText()">
-                <div id="output-text" class="uneditable-text">{<br />&emsp;Text will output here<br />}</div>
+                <div id="output-text" class="uneditable-text output-text">{<br />&emsp;Text will output here<br />}
+                </div>
             </div>
         </div>
     </div>
