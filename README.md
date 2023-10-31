@@ -61,3 +61,4 @@ This tool is developed using the following technologies:
 - HTML
 - CSS
 - JavaScript
+- Tailwind
